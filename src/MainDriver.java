@@ -9,13 +9,13 @@ public class MainDriver
 		Deck playerTwo = new Deck();
 		int oneWins = 0;
 		int twoWins = 0;
-	
+		
 		System.out.println("Shuffling the decks.\n");
 	
 		playerOne.shuffleDeck();
 		playerTwo.shuffleDeck();
 		
-		for (int roundsRemaining = 52; roundsRemaining > 0; roundsRemaining--)
+		for (int rounds = 52; rounds > 0; rounds--)
 		{
 			Card oneCard = playerOne.drawCard();
 			System.out.println("Player One draws, " + oneCard);
@@ -36,7 +36,7 @@ public class MainDriver
 		}
 		
 		System.out.println("Player One, wins " + oneWins + " hands.");
-		System.out.println("Player Two, wins " + twoWins + " hands.");
+		System.out.println("Player Two, wins " + twoWins + " hands.\n");
 	
 		if (oneWins > twoWins)
 			System.out.println("End of game. Player One wins this game!");
